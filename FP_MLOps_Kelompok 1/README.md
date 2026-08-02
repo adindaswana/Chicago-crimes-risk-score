@@ -16,13 +16,11 @@ rencana perluasan cakupan dijelaskan di `docs/REGION_SCOPE.md`.
 
 ```
 FP_MLOps_Kelompok 1/
-├── features.py                       [fondasi, tidak diubah] sumber kebenaran feature engineering
-├── features_labels.csv               [fondasi, tidak diubah] dataset training (122.976 x 16)
-├── label_params.json                 [fondasi, tidak diubah] parameter label beku
-├── 01_pseudolabeling_feature_engineering.ipynb   [fondasi, tidak diubah]
-├── NOTES_CP2.md, HO2_MLOps_IraAriantiAlawiah.ipynb               [catatan & referensi eksternal]
+├── features.py                       # sumber kebenaran feature engineering
+├── features_labels.csv               # dataset training (122.976 x 16)
+├── label_params.json                             
 │
-├── src/                               # satu-satunya sumber kebenaran logika sistem
+├── src/                               #
 │   ├── config.py                      #   RANDOM_STATE, path, ambang level, versi model, wilayah
 │   ├── viz.py                         #   palet brand + rcParams, satu tempat
 │   ├── splits.py                      #   protokol evaluasi A/B/C + pemuatan dataset
@@ -37,6 +35,7 @@ FP_MLOps_Kelompok 1/
 │   └── batch.py                        #   jalur fitur vektorized (satu merge) untuk /risk-score/batch
 │
 ├── notebooks/
+│   └── 01_pseudolabeling_feature_engineering.ipynb   
 │   └── 02_model_training_baseline_comparison.ipynb   # narasi lengkap pelatihan model, mengimpor src/ yang sama
 │
 ├── train.py                            # skrip training end-to-end (non-interaktif, sama isi dengan notebook)
