@@ -1,0 +1,28 @@
+# Checkpoint 2 - dependensi terkunci (diverifikasi jalan pada Python 3.13.5).
+# Instalasi: python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+
+# --- Data & modeling ---
+numpy==2.5.1
+pandas==3.0.5
+scipy==1.18.0
+scikit-learn==1.9.0
+xgboost==3.3.0
+joblib==1.5.3
+
+# --- Visualisasi ---
+matplotlib==3.11.1
+
+# --- REST API ---
+fastapi==0.141.1
+uvicorn[standard]==0.52.1
+pydantic==2.13.4
+
+# --- Pengujian ---
+pytest==9.1.1
+httpx==0.28.1
+
+# --- Notebook (hanya untuk membuka/menjalankan ulang notebooks/*.ipynb) ---
+jupyter==1.1.1
+nbclient==0.11.0
+nbformat==5.10.4
+ipykernel==7.3.0

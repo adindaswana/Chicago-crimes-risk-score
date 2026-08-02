@@ -1,0 +1,176 @@
+[
+  {
+    "version": "v1",
+    "trained_at": "2026-08-02T15:10:35.275383+00:00",
+    "algorithm": "Model: XGBoost",
+    "evaluation_protocols": [
+      "protocol_A",
+      "protocol_B",
+      "protocol_C"
+    ],
+    "metrics": {
+      "protocol_A": [
+        {
+          "protocol": "A",
+          "predictor": "Baseline: Global Mean",
+          "predictor_type": "baseline",
+          "MAE": 18.798143116700047,
+          "RMSE": 22.77695735107653,
+          "R2": -5.990146441936517e-05,
+          "Spearman": null,
+          "improvement_vs_strongest_baseline_pct": -288.3430478879922
+        },
+        {
+          "protocol": "A",
+          "predictor": "Baseline: Rata-rata per Sel",
+          "predictor_type": "baseline",
+          "MAE": 7.421020860314641,
+          "RMSE": 9.682426517331734,
+          "R2": 0.8192813322703817,
+          "Spearman": 0.9079798659327858,
+          "improvement_vs_strongest_baseline_pct": -53.30779436266291
+        },
+        {
+          "protocol": "A",
+          "predictor": "Baseline: Rata-rata per Jam+Hari",
+          "predictor_type": "baseline",
+          "MAE": 17.819096019722377,
+          "RMSE": 21.658537412275077,
+          "R2": 0.09574098285158994,
+          "Spearman": 0.28557954181293727,
+          "improvement_vs_strongest_baseline_pct": -268.1173196708031
+        },
+        {
+          "protocol": "A",
+          "predictor": "Baseline: Sel+Jam (shrinkage)",
+          "predictor_type": "baseline",
+          "MAE": 4.840602456754137,
+          "RMSE": 6.322996493652855,
+          "R2": 0.9229308660231972,
+          "Spearman": 0.9613614586199254,
+          "improvement_vs_strongest_baseline_pct": 0.0
+        },
+        {
+          "protocol": "A",
+          "predictor": "Champion: Model: XGBoost",
+          "predictor_type": "model",
+          "MAE": 2.888662119887666,
+          "RMSE": 3.6822204320279335,
+          "R2": 0.9738630947249448,
+          "Spearman": 0.9866885462910916,
+          "improvement_vs_strongest_baseline_pct": 40.324326451202595
+        }
+      ],
+      "protocol_B": [
+        {
+          "protocol": "B",
+          "predictor": "Baseline: Global Mean",
+          "predictor_type": "baseline",
+          "MAE": 18.904610668304024,
+          "RMSE": 23.198005622881105,
+          "R2": -0.0008595082818683153,
+          "Spearman": null,
+          "improvement_vs_strongest_baseline_pct": -5.822684916999021
+        },
+        {
+          "protocol": "B",
+          "predictor": "Baseline: Rata-rata per Sel",
+          "predictor_type": "baseline",
+          "MAE": 18.904610668304024,
+          "RMSE": 23.198005622881105,
+          "R2": -0.0008595082818683153,
+          "Spearman": null,
+          "improvement_vs_strongest_baseline_pct": -5.822684916999021
+        },
+        {
+          "protocol": "B",
+          "predictor": "Baseline: Rata-rata per Jam+Hari",
+          "predictor_type": "baseline",
+          "MAE": 17.86442168154368,
+          "RMSE": 22.125663321359013,
+          "R2": 0.08953255873364407,
+          "Spearman": 0.28163212197194504,
+          "improvement_vs_strongest_baseline_pct": 0.0
+        },
+        {
+          "protocol": "B",
+          "predictor": "Baseline: Sel+Jam (shrinkage)",
+          "predictor_type": "baseline",
+          "MAE": 18.904610668304024,
+          "RMSE": 23.198005622881105,
+          "R2": -0.0008595082818683153,
+          "Spearman": null,
+          "improvement_vs_strongest_baseline_pct": -5.822684916999021
+        },
+        {
+          "protocol": "B",
+          "predictor": "Champion: Model: XGBoost",
+          "predictor_type": "model",
+          "MAE": 3.292234516170734,
+          "RMSE": 4.253276698413431,
+          "R2": 0.9663551114305261,
+          "Spearman": 0.9829704225912863,
+          "improvement_vs_strongest_baseline_pct": 81.57099863147515
+        }
+      ],
+      "protocol_C": [
+        {
+          "protocol": "C",
+          "predictor": "Baseline: Global Mean",
+          "predictor_type": "baseline",
+          "MAE": 19.274578391193064,
+          "RMSE": 23.69104176865725,
+          "R2": -0.00015293533494942224,
+          "Spearman": null,
+          "improvement_vs_strongest_baseline_pct": -5.438430877234635
+        },
+        {
+          "protocol": "C",
+          "predictor": "Baseline: Rata-rata per Sel",
+          "predictor_type": "baseline",
+          "MAE": 19.274578391193064,
+          "RMSE": 23.69104176865725,
+          "R2": -0.00015293533494942224,
+          "Spearman": null,
+          "improvement_vs_strongest_baseline_pct": -5.438430877234635
+        },
+        {
+          "protocol": "C",
+          "predictor": "Baseline: Rata-rata per Jam+Hari",
+          "predictor_type": "baseline",
+          "MAE": 18.28041088133707,
+          "RMSE": 22.629587916324365,
+          "R2": 0.08746109710182626,
+          "Spearman": 0.2789365084323413,
+          "improvement_vs_strongest_baseline_pct": 0.0
+        },
+        {
+          "protocol": "C",
+          "predictor": "Baseline: Sel+Jam (shrinkage)",
+          "predictor_type": "baseline",
+          "MAE": 19.274578391193064,
+          "RMSE": 23.69104176865725,
+          "R2": -0.00015293533494942224,
+          "Spearman": null,
+          "improvement_vs_strongest_baseline_pct": -5.438430877234635
+        },
+        {
+          "protocol": "C",
+          "predictor": "Champion: Model: XGBoost",
+          "predictor_type": "model",
+          "MAE": 3.349186215916904,
+          "RMSE": 4.322711907630533,
+          "R2": 0.9667025725073219,
+          "Spearman": 0.983443462695763,
+          "improvement_vs_strongest_baseline_pct": 81.67882419242463
+        }
+      ]
+    },
+    "artifact_path": "models/model_bundle_v1.joblib",
+    "dataset_fingerprint": {
+      "n_rows": 122976,
+      "hash": "f2021b25a805dee5"
+    },
+    "status": "champion"
+  }
+]

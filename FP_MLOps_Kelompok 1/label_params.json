@@ -1,0 +1,35 @@
+{
+  "reference_date": "2026-04-11 00:00:00",
+  "subset_start_year": 2022,
+  "grid_decimals": 2,
+  "half_life_days": 365.0,
+  "sigma_km": 0.7,
+  "cutoff_km": 3.0,
+  "clip_percentile": 0.99,
+  "score_clip_value": 384.17,
+  "score_exponent": 0.5,
+  "n_cells": 732,
+  "n_rows": 122976,
+  "feature_columns": [
+    "lat_r",
+    "lon_r",
+    "hour",
+    "dow",
+    "is_weekend",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "crime_count",
+    "violent_share",
+    "arrest_rate",
+    "cell_total_count",
+    "neighbor_count_mean"
+  ],
+  "target": "risk_score",
+  "label_ingredient_columns": [
+    "base_value",
+    "risk_raw"
+  ],
+  "_recovery_note": "Direkonstruksi dari output sel 43 notebook CP1. score_clip_value dipulihkan dari cetakan berpresisi 2 desimal (384.17); nilai ini hanya dipakai sebagai dokumentasi jangkar normalisasi, tidak dipakai ulang untuk menghitung label pada CP2."
+}

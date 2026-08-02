@@ -1,0 +1,415 @@
+{
+  "champion_algorithm": "Model: XGBoost",
+  "champion_selection_reason": "MAE 2 kandidat setara dalam margin 0.5: Model: XGBoost (MAE 3.292), Model: Random Forest (MAE 3.360). Di antaranya, Model: XGBoost dipilih karena waktu training tercepat (0.28 detik) dan artefak terkecil (478.3 KB) - relevan karena CP3 memerlukan retrain berulang dan API memerlukan waktu muat cepat saat startup.",
+  "unseen_cell_verification": {
+    "A_unseen_cell_pct": 0.0,
+    "B_unseen_cell_pct": 100.0,
+    "A_train_rows": 98380,
+    "A_test_rows": 24596,
+    "B_train_rows": 98280,
+    "B_test_rows": 24696,
+    "C_test_rows": 7203
+  },
+  "shrinkage_m_selected": {
+    "A": 1.0,
+    "B": 0.0
+  },
+  "candidate_comparison_protocol_B": [
+    {
+      "model": "Model: Ridge Regression",
+      "MAE": 6.1882542541838506,
+      "RMSE": 8.422257618808324,
+      "R2": 0.8680744651693413,
+      "Spearman": 0.9547419613054255,
+      "train_seconds": 0.0152,
+      "artifact_kb": 1.1
+    },
+    {
+      "model": "Model: Random Forest",
+      "MAE": 3.3595336894428183,
+      "RMSE": 4.364594261928519,
+      "R2": 0.9645709444419569,
+      "Spearman": 0.9817228194204733,
+      "train_seconds": 10.8949,
+      "artifact_kb": 751447.2
+    },
+    {
+      "model": "Model: XGBoost",
+      "MAE": 3.292234516170734,
+      "RMSE": 4.253276698413431,
+      "R2": 0.9663551114305261,
+      "Spearman": 0.9829704225912863,
+      "train_seconds": 0.2768,
+      "artifact_kb": 478.3
+    }
+  ],
+  "final_comparison_table": [
+    {
+      "protocol": "A",
+      "predictor": "Baseline: Global Mean",
+      "predictor_type": "baseline",
+      "MAE": 18.798143116700047,
+      "RMSE": 22.77695735107653,
+      "R2": -5.990146441936517e-05,
+      "Spearman": null,
+      "improvement_vs_strongest_baseline_pct": -288.3430478879922
+    },
+    {
+      "protocol": "A",
+      "predictor": "Baseline: Rata-rata per Sel",
+      "predictor_type": "baseline",
+      "MAE": 7.421020860314641,
+      "RMSE": 9.682426517331734,
+      "R2": 0.8192813322703817,
+      "Spearman": 0.9079798659327858,
+      "improvement_vs_strongest_baseline_pct": -53.30779436266291
+    },
+    {
+      "protocol": "A",
+      "predictor": "Baseline: Rata-rata per Jam+Hari",
+      "predictor_type": "baseline",
+      "MAE": 17.819096019722377,
+      "RMSE": 21.658537412275077,
+      "R2": 0.09574098285158994,
+      "Spearman": 0.28557954181293727,
+      "improvement_vs_strongest_baseline_pct": -268.1173196708031
+    },
+    {
+      "protocol": "A",
+      "predictor": "Baseline: Sel+Jam (shrinkage)",
+      "predictor_type": "baseline",
+      "MAE": 4.840602456754137,
+      "RMSE": 6.322996493652855,
+      "R2": 0.9229308660231972,
+      "Spearman": 0.9613614586199254,
+      "improvement_vs_strongest_baseline_pct": 0.0
+    },
+    {
+      "protocol": "A",
+      "predictor": "Champion: Model: XGBoost",
+      "predictor_type": "model",
+      "MAE": 2.888662119887666,
+      "RMSE": 3.6822204320279335,
+      "R2": 0.9738630947249448,
+      "Spearman": 0.9866885462910916,
+      "improvement_vs_strongest_baseline_pct": 40.324326451202595
+    },
+    {
+      "protocol": "B",
+      "predictor": "Baseline: Global Mean",
+      "predictor_type": "baseline",
+      "MAE": 18.904610668304024,
+      "RMSE": 23.198005622881105,
+      "R2": -0.0008595082818683153,
+      "Spearman": null,
+      "improvement_vs_strongest_baseline_pct": -5.822684916999021
+    },
+    {
+      "protocol": "B",
+      "predictor": "Baseline: Rata-rata per Sel",
+      "predictor_type": "baseline",
+      "MAE": 18.904610668304024,
+      "RMSE": 23.198005622881105,
+      "R2": -0.0008595082818683153,
+      "Spearman": null,
+      "improvement_vs_strongest_baseline_pct": -5.822684916999021
+    },
+    {
+      "protocol": "B",
+      "predictor": "Baseline: Rata-rata per Jam+Hari",
+      "predictor_type": "baseline",
+      "MAE": 17.86442168154368,
+      "RMSE": 22.125663321359013,
+      "R2": 0.08953255873364407,
+      "Spearman": 0.28163212197194504,
+      "improvement_vs_strongest_baseline_pct": 0.0
+    },
+    {
+      "protocol": "B",
+      "predictor": "Baseline: Sel+Jam (shrinkage)",
+      "predictor_type": "baseline",
+      "MAE": 18.904610668304024,
+      "RMSE": 23.198005622881105,
+      "R2": -0.0008595082818683153,
+      "Spearman": null,
+      "improvement_vs_strongest_baseline_pct": -5.822684916999021
+    },
+    {
+      "protocol": "B",
+      "predictor": "Champion: Model: XGBoost",
+      "predictor_type": "model",
+      "MAE": 3.292234516170734,
+      "RMSE": 4.253276698413431,
+      "R2": 0.9663551114305261,
+      "Spearman": 0.9829704225912863,
+      "improvement_vs_strongest_baseline_pct": 81.57099863147515
+    },
+    {
+      "protocol": "C",
+      "predictor": "Baseline: Global Mean",
+      "predictor_type": "baseline",
+      "MAE": 19.274578391193064,
+      "RMSE": 23.69104176865725,
+      "R2": -0.00015293533494942224,
+      "Spearman": null,
+      "improvement_vs_strongest_baseline_pct": -5.438430877234635
+    },
+    {
+      "protocol": "C",
+      "predictor": "Baseline: Rata-rata per Sel",
+      "predictor_type": "baseline",
+      "MAE": 19.274578391193064,
+      "RMSE": 23.69104176865725,
+      "R2": -0.00015293533494942224,
+      "Spearman": null,
+      "improvement_vs_strongest_baseline_pct": -5.438430877234635
+    },
+    {
+      "protocol": "C",
+      "predictor": "Baseline: Rata-rata per Jam+Hari",
+      "predictor_type": "baseline",
+      "MAE": 18.28041088133707,
+      "RMSE": 22.629587916324365,
+      "R2": 0.08746109710182626,
+      "Spearman": 0.2789365084323413,
+      "improvement_vs_strongest_baseline_pct": 0.0
+    },
+    {
+      "protocol": "C",
+      "predictor": "Baseline: Sel+Jam (shrinkage)",
+      "predictor_type": "baseline",
+      "MAE": 19.274578391193064,
+      "RMSE": 23.69104176865725,
+      "R2": -0.00015293533494942224,
+      "Spearman": null,
+      "improvement_vs_strongest_baseline_pct": -5.438430877234635
+    },
+    {
+      "protocol": "C",
+      "predictor": "Champion: Model: XGBoost",
+      "predictor_type": "model",
+      "MAE": 3.349186215916904,
+      "RMSE": 4.322711907630533,
+      "R2": 0.9667025725073219,
+      "Spearman": 0.983443462695763,
+      "improvement_vs_strongest_baseline_pct": 81.67882419242463
+    }
+  ],
+  "target_encoding_ablation": [
+    {
+      "protocol": "A",
+      "predictor": "Model: XGBoost (tanpa target encoding)",
+      "predictor_type": "ablation",
+      "MAE": 2.888662119887666,
+      "RMSE": 3.6822204320279335,
+      "R2": 0.9738630947249448,
+      "Spearman": 0.9866885462910916,
+      "unseen_cell_pct": 0.0
+    },
+    {
+      "protocol": "A",
+      "predictor": "Model: XGBoost (dengan target encoding)",
+      "predictor_type": "ablation",
+      "MAE": 2.888519412554233,
+      "RMSE": 3.6751774469367127,
+      "R2": 0.9739629832519159,
+      "Spearman": 0.9867227584694545,
+      "unseen_cell_pct": 0.0
+    },
+    {
+      "protocol": "B",
+      "predictor": "Model: XGBoost (tanpa target encoding)",
+      "predictor_type": "ablation",
+      "MAE": 3.292234516170734,
+      "RMSE": 4.253276698413431,
+      "R2": 0.9663551114305261,
+      "Spearman": 0.9829704225912863,
+      "unseen_cell_pct": 100.0
+    },
+    {
+      "protocol": "B",
+      "predictor": "Model: XGBoost (dengan target encoding)",
+      "predictor_type": "ablation",
+      "MAE": 6.499088305209574,
+      "RMSE": 8.567300155487168,
+      "R2": 0.86349147124062,
+      "Spearman": 0.9667498312732303,
+      "unseen_cell_pct": 100.0
+    }
+  ],
+  "segmented_evaluation_protocol_B": {
+    "per_quintile": [
+      {
+        "quintile": "Q1 (aman)",
+        "err_model": 2.453727527578196,
+        "err_baseline": 31.48759984053417,
+        "improvement_pct": 92.20732116768234
+      },
+      {
+        "quintile": "Q2",
+        "err_model": 3.221237923274896,
+        "err_baseline": 14.888360428272838,
+        "improvement_pct": 78.36405198011059
+      },
+      {
+        "quintile": "Q3",
+        "err_model": 3.1691766435748727,
+        "err_baseline": 3.314694133283786,
+        "improvement_pct": 4.390072925514632
+      },
+      {
+        "quintile": "Q4",
+        "err_model": 3.5400631464137913,
+        "err_baseline": 10.93044736175049,
+        "improvement_pct": 67.61282471564954
+      },
+      {
+        "quintile": "Q5 (rawan)",
+        "err_model": 4.077137112635641,
+        "err_baseline": 33.89940389815419,
+        "improvement_pct": 87.97283537821254
+      }
+    ],
+    "per_hour_group": [
+      {
+        "hour_group": "00-05",
+        "err_model": 3.2710400360081477,
+        "err_baseline": 18.430829036166948
+      },
+      {
+        "hour_group": "06-11",
+        "err_model": 3.169356811290849,
+        "err_baseline": 17.41743174289164
+      },
+      {
+        "hour_group": "12-17",
+        "err_model": 3.3502707713532884,
+        "err_baseline": 19.83417514491504
+      },
+      {
+        "hour_group": "18-23",
+        "err_model": 3.3782704460306494,
+        "err_baseline": 19.936006749242466
+      }
+    ],
+    "large_error_fractions": {
+      "5": {
+        "model_pct": 21.51360544217687,
+        "baseline_pct": 83.41026886945254
+      },
+      "10": {
+        "model_pct": 2.5064787819889864,
+        "baseline_pct": 67.89763524457402
+      },
+      "20": {
+        "model_pct": 0.024295432458697763,
+        "baseline_pct": 41.76384839650146
+      }
+    },
+    "worst_cells": [
+      {
+        "cell_id": "41.88_-87.77",
+        "mean": 10.464813478568427,
+        "count": 168
+      },
+      {
+        "cell_id": "41.8_-87.58",
+        "mean": 9.708713532869378,
+        "count": 168
+      },
+      {
+        "cell_id": "41.88_-87.74",
+        "mean": 7.257304122270896,
+        "count": 168
+      },
+      {
+        "cell_id": "41.89_-87.74",
+        "mean": 6.179661861991951,
+        "count": 168
+      },
+      {
+        "cell_id": "41.9_-87.62",
+        "mean": 6.094246121103869,
+        "count": 168
+      }
+    ],
+    "spearman_model": 0.9829704225912863,
+    "spearman_baseline": null
+  },
+  "permutation_importance_protocol_B": [
+    {
+      "feature": "neighbor_count_mean",
+      "importance_mean": 13.537416637321945,
+      "importance_std": 0.06229013841740971
+    },
+    {
+      "feature": "crime_count",
+      "importance_mean": 5.9917597841200445,
+      "importance_std": 0.036173480176643104
+    },
+    {
+      "feature": "lon_r",
+      "importance_mean": 1.465444989126792,
+      "importance_std": 0.015141567748378089
+    },
+    {
+      "feature": "lat_r",
+      "importance_mean": 1.1015938764496962,
+      "importance_std": 0.017136268148471277
+    },
+    {
+      "feature": "violent_share",
+      "importance_mean": 0.4788236268599991,
+      "importance_std": 0.008408717715783455
+    },
+    {
+      "feature": "cell_total_count",
+      "importance_mean": 0.23828993048650435,
+      "importance_std": 0.011328950246289724
+    },
+    {
+      "feature": "hour",
+      "importance_mean": 0.09053490003534988,
+      "importance_std": 0.0033794564272915687
+    },
+    {
+      "feature": "hour_cos",
+      "importance_mean": 0.07996368252981342,
+      "importance_std": 0.0016496796684888
+    },
+    {
+      "feature": "arrest_rate",
+      "importance_mean": 0.03781542664642608,
+      "importance_std": 0.0033831429886206593
+    },
+    {
+      "feature": "dow",
+      "importance_mean": 0.031790857055778686,
+      "importance_std": 0.0016259698881000361
+    },
+    {
+      "feature": "hour_sin",
+      "importance_mean": 0.029704656186374745,
+      "importance_std": 0.0016798956245649627
+    },
+    {
+      "feature": "dow_sin",
+      "importance_mean": 0.010295797548979557,
+      "importance_std": 0.0008966286145743808
+    },
+    {
+      "feature": "dow_cos",
+      "importance_mean": 0.0029323291013080067,
+      "importance_std": 0.0008751345734754841
+    },
+    {
+      "feature": "is_weekend",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    }
+  ],
+  "dataset_fingerprint": {
+    "n_rows": 122976,
+    "hash": "f2021b25a805dee5"
+  }
+}
